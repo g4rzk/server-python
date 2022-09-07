@@ -8,9 +8,10 @@ Server Python Merupakan sebuah script CRUD menggunakan python dan SQLite.
  - Kadaluarsa
 
 ### Requirements
- - Git
- - Rich
- - Python 3.9^
+ - git
+ - rich
+ - sqlite3
+ - python 3.9^
 
 ### Installation
 ```Python
