@@ -66,6 +66,7 @@ class Server:
 		
 	# method melihat semua data di database
 	def showData(sef):
+		table = Table("License", "Pengguna", "Bergabung", "Kadaluarsa")
 		c.execute("SELECT * FROM garzk ORDER BY license ASC")
 		for i in c.fetchall():
 			license = i[0]
@@ -73,11 +74,10 @@ class Server:
 			bergabung = i[2]
 			kadaluarsa = i[3]
 			
-			# print semua data di table rich
-			table = Table("License", "Pengguna", "Bergabung", "Kadaluarsa")
+			# masukan semua data di table rich
 			table.add_row(f"{license}", f"{pengguna}", f"{bergabung}", f"{kadaluarsa}")
-			console = Console()
-			console.print(table, justify="center")
+		console = Console()
+		console.print(table, justify="center")
 	
 	# method back to menu
 	def backtoMenu(self):
@@ -169,7 +169,7 @@ class Server:
 			self.backtoMenu()
 
 run = Server()
-run.loginServer()
+#run.loginServer()
 run.showData()
 run.menuServer()
 
